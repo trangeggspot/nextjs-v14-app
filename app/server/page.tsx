@@ -1,11 +1,11 @@
 import Navigation from '../Navigation';
-import SimpleGreeter from '../simple-greeter';
+import ServerComponent from '../ServerComponent';
 
 export default function Home() {
   return (
     <main>
       <Navigation></Navigation>
-      <SimpleGreeter name="Friend" />
+      <ServerComponent />
     </main>
   );
 }

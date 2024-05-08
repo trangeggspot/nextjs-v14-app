@@ -1,6 +1,6 @@
 'use client';
 
-import '../src/simple-greeter';
+import '../web-component/simple-greeter';
 
 export default function SimpleGreeter(props: any) {
   return <simple-greeter {...props} />;

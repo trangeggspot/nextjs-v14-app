@@ -1,6 +1,5 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import type React from 'react';
 import './count-display';
 
 @customElement('simple-greeter')
@@ -35,30 +34,25 @@ export class SimpleGreeter extends LitElement {
   @property({type: Number})
   count = 0;
 
+  increaseCount() {
+    this.count++;
+    console.log("-------------increaseCount------------");
+  }
+
+  constructor() {
+    super();
+    console.log("------------constructor-------------");
+  }
+
   render() {
     return html`
       <div>
         <h1>Hello, <span>${this.name}</span>!</h1>
         <count-display .count=${this.count}></count-display>
-        <button @click=${() => this.count++}>++</button>
+        <button @click=${this.increaseCount}>++</button>
       </div>
     `;
   }
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'simple-greeter': SimpleGreeter;
-  }
 
-  namespace JSX {
-    interface IntrinsicElements {
-      'simple-greeter':
-        | React.DetailedHTMLProps<
-            React.HTMLAttributes<SimpleGreeter>,
-            SimpleGreeter
-          >
-        | Partial<SimpleGreeter>;
-    }
-  }
-}
