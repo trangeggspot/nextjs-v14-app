@@ -1,9 +1,11 @@
-import Navigation from "./Navigation";
+import ReactComponent from "./ReactComponent";
+import WebComponent from "./WebComponent";
 
 export default function Home() {
   return (
     <main>
-      <Navigation></Navigation>
+      <WebComponent></WebComponent>
+      <ReactComponent></ReactComponent>
     </main>
   );
 }
