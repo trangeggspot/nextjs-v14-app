@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <WebComponent></WebComponent>
-      <ReactComponent></ReactComponent>
+      {/* <ReactComponent></ReactComponent> */}
     </main>
   );
 }
